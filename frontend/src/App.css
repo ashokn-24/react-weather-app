@@ -1,0 +1,85 @@
+.forecast-card{
+  width: fit-content;
+  height: fit-content;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid ;
+  border-radius: 5px;
+  text-align: center;
+  background:#eee;
+}
+
+input{
+  padding: 5px;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid  #fff;
+  margin: 0 10px;
+}
+
+input::placeholder{
+  color: #fff;
+}
+
+.forecast{
+  display: flex;
+  justify-content: center
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  background-color: hsl(203.79, 90.63%, 12.55%);
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+footer {
+  scroll-snap-align: end;
+}
+
+.weather-display-container {
+  text-align: center;
+}
+
+footer {
+  background: rgba(255, 251, 251, 0.1);
+  backdrop-filter: blur(30px);
+}
+
+footer h5 {
+  color: #99CFE7;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#weather{
+  border-radius: 50px;
+  height: fit-content;
+  background: rgba(255, 251, 251, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+#weather h1{
+  color: #99CFE7;
+}

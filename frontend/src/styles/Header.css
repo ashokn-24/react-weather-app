@@ -1,0 +1,56 @@
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.blur {
+  width: 80%;
+  height: 90vh;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 251, 251, 0.1);
+  backdrop-filter: blur(30px);
+}
+
+
+
+.header h1{
+  color: #99CFE7;
+}
+
+.ball1{
+  width: 200px;
+  position: absolute;
+  top:0;
+  right: 0;
+  height: 200px;
+  background-color:#99CFE7;
+  border-radius: 50%;
+  z-index: -1;
+}
+.ball2{
+  width: 200px;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  height: 200px;
+  background-color: #99CFE7;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+img{
+  border-radius: 30px;
+}
+
