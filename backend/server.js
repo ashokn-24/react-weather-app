@@ -16,7 +16,7 @@ app.get("/weather", async (req, res) => {
   try {
     const { location } = req.query;
 
-    const WEATHER_API_KEY = process.env.API_URL;
+    const WEATHER_API_KEY = process.env.API_KEY;
     const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${location}&days=5&aqi=yes&alerts=no`;
 
     const response = await axios.get(API_URL);
