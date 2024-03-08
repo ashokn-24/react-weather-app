@@ -3,26 +3,23 @@ import axios from "axios";
 import cors from "cors";
 import dotenv from "dotenv";
 
-dotenv.config();
-
 const app = express();
 
-app.use(cors());
+dotenv.config();
 
+app.use(cors());
 app.use(express.json());
-// app.use(express.urlencoded({ extends: false }));
+
+const PORT = process.env.PORT || 3000;
 
 app.get("/weather", async (req, res) => {
+  res.send("Server");
   try {
     const { location } = req.query;
-
     const WEATHER_API_KEY = process.env.API_KEY;
     const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${location}&days=5&aqi=yes&alerts=no`;
-
     const response = await axios.get(API_URL);
-
     const { current, forecast } = response.data;
-
     res.json({
       currentWeather: current,
       forecast: forecast.forecastday,
@@ -32,6 +29,6 @@ app.get("/weather", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log(" server listening on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(` server listening on http://localhost:${PORT}`);
 });

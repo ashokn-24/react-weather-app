@@ -1,7 +1,7 @@
 // App.jsx
 
-import FetchApi from "./components/FetchApi";
 import Header from "./components/Header";
+import FetchApi from "./components/FetchApi";
 import Footer from "./components/Footer";
 import "./App.css";
 

@@ -16,7 +16,8 @@ function FetchApi() {
       setLoading(true);
 
       const response = await axios.get(
-        `http://localhost:3000/weather?location=${city}`
+        `${import.meta.env.VITE_APP_API_URL}/weather?location=${city}`
+        // `http://localhost:5000/weather?location=${city}`
       );
 
       setWeatherData(response.data);
